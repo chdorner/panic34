@@ -12,9 +12,6 @@
 #define NAV_L 1
 #define SYM_L 2
 #define NUM_L 3
-#define OTH_L 4
-#define MED_L 5
-#define FUN_L 6
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -23,17 +20,17 @@
     combos {
         compatible = "zmk,combos";
 
-        med_mo {
-	    timeout-ms = <50>;
-            key-positions = <30 31>;
-            bindings = <&mo MED_L>;
-        };
+        //med_mo {
+	    //timeout-ms = <50>;
+        //    key-positions = <30 31>;
+        //    bindings = <&mo MED_L>;
+        //};
 
-        fn_mo {
-	    timeout-ms = <50>;
-            key-positions = <32 33>;
-            bindings = <&mo FUN_L>;
-        };
+        //fn_mo {
+	    //timeout-ms = <50>;
+        //    key-positions = <32 33>;
+        //    bindings = <&mo FUN_L>;
+        //};
 
     };
 
@@ -57,7 +54,7 @@
                 &kp Q      &kp W      &kp F       &kp P            &kp G          &kp J          &kp L          &kp U         &kp Y       &kp SEMI
                 &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T      &kp D          &kp H          &hm RSHFT N    &hm RCTRL E   &hm LALT I  &hm LGUI O
                 &kp Z      &kp X      &kp C       &kp V            &kp B          &kp K          &kp M          &kp COMMA     &kp DOT     &kp SQT
-                                                  &lt NAV_L SPACE  &lt SYM_L BSPC &lt NUM_L TAB  &lt OTH_L RET
+                                                  &lt NAV_L SPACE  &lt SYM_L BSPC &lt NUM_L TAB  &kp RET
             >;
         };
 
@@ -88,36 +85,6 @@
                 &kp N0     &kp N4     &kp N5      &kp N6           &kp MINUS      &trans         &kp RSHFT      &kp RCTRL     &kp LALT    &kp LGUI
                 &kp DOT    &kp N1     &kp N2      &kp N3           &trans         &trans         &trans         &trans        &trans      &trans
                                                   &kp SPACE        &kp BSPC       &trans         &kp RET
-            >;
-        };
-
-        media_layer {
-            label = "Media";
-            bindings = <
-                &trans	   &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp C_PREV     &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &trans
-                                                  &trans          &trans       &kp C_STOP       &kp C_PLAY_PAUSE
-            >;
-        };
-
-        other_layer {
-            label = "Other";
-            bindings = <
-                &trans	   &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &bt BT_CLR
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &trans
-                &trans     &trans     &trans      &trans          &trans       &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-                                                  &trans          &trans       &trans           &trans
-            >;
-        };
-
-        fun_layer {
-            label = "Fun";
-            bindings = <
-                &kp F12     &kp F7     &kp F8      &kp F9     &kp PSCRN         &trans          &trans         &trans      &trans     &trans
-                &kp F11     &kp F4     &kp F5      &kp F6     &kp SLCK          &trans          &trans         &trans      &trans     &trans
-                &kp F10     &kp F1     &kp F2      &kp F3     &kp PAUSE_BREAK   &trans          &trans         &trans      &trans     &trans
-                                                   &none      &none             &trans          &trans
             >;
         };
     };
