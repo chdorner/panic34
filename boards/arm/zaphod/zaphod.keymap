@@ -43,6 +43,14 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        quexmark: question_exclamation_mark {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QMARK_EXCL";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -72,7 +80,7 @@
             label = "Sym";
             bindings = <
                 &trans     &trans     &trans      &trans           &trans         &kp PLUS       &kp EQUAL      &kp AMPS      &kp ASTRK   &kp PRCNT
-                &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT        &trans         &kp TILDE      &kp QMARK      &kp HASH      &kp GRAVE   &kp FSLH
+                &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT        &trans         &kp TILDE      &quexmark      &kp HASH      &kp GRAVE   &kp FSLH
                 &trans     &trans     &trans      &trans           &trans         &kp DOLLAR     &kp AT         &kp BSLH      &kp PIPE    &kp CARET
                                                   &kp SPACE        &trans         &kp TAB        &kp RET
             >;
