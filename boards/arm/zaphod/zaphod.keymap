@@ -10,9 +10,9 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define NAV_L 1
-#define OTH_L 2
+#define SYM_L 2
 #define NUM_L 3
-#define SYM_L 4
+#define OTH_L 4
 #define MED_L 5
 #define FUN_L 6
 
@@ -57,7 +57,7 @@
                 &kp Q      &kp W      &kp F       &kp P            &kp G          &kp J            &kp L          &kp U        &kp Y        &kp SEMI
                 &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T      &kp D          &kp H            &hm RSHFT N    &hm RCTRL E  &hm LALT I   &hm LGUI O
                 &kp Z      &kp X      &kp C       &kp V            &kp B          &kp K            &kp M          &kp COMMA    &kp DOT      &kp SQT
-                                                  &lt NAV_L SPACE  &lt OTH_L BSPC &lt NUM_L TAB    &lt SYM_L RET
+                                                  &lt NAV_L SPACE  &lt SYM_L BSPC &lt NUM_L TAB    &lt OTH_L RET
             >;
         };
 
@@ -71,13 +71,13 @@
             >;
         };
 
-        other_layer {
-            label = "Other";
+        sym_layer {
+            label = "Sym";
             bindings = <
-                &trans	   &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &bt BT_CLR
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &trans
-                &trans     &trans     &trans      &trans          &trans       &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-                                                  &trans          &trans       &trans           &trans
+                &kp LBRC     &kp LS(N7)  &kp LS(N8)  &kp LS(N9) &kp RBRC        &trans &trans   &trans    &trans    &trans
+                &kp COLON    &kp LS(N4)  &kp LS(N5)  &kp LS(N6) &kp PLUS        &trans &trans   &trans    &trans    &trans
+                &kp TILDE    &kp LS(N1)  &kp LS(N2)  &kp LS(N3) &kp LS(BSLH)    &trans &trans   &trans    &trans    &trans
+                                                   &kp LS(N0) &kp UNDER         &trans &trans
             >;
         };
 
@@ -91,16 +91,6 @@
             >;
         };
 
-        sym_layer {
-            label = "Sym";
-            bindings = <
-                &kp LBRC     &kp LS(N7)  &kp LS(N8)  &kp LS(N9) &kp RBRC        &trans &trans   &trans    &trans    &trans
-                &kp COLON    &kp LS(N4)  &kp LS(N5)  &kp LS(N6) &kp PLUS        &trans &trans   &trans    &trans    &trans
-                &kp TILDE    &kp LS(N1)  &kp LS(N2)  &kp LS(N3) &kp LS(BSLH)    &trans &trans   &trans    &trans    &trans
-                                                   &kp LS(N0) &kp UNDER         &trans &trans
-            >;
-        };
-
         media_layer {
             label = "Media";
             bindings = <
@@ -108,6 +98,16 @@
                 &trans     &trans     &trans      &trans          &trans       &trans           &kp C_PREV     &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
                 &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &trans
                                                   &trans          &trans       &kp C_STOP       &kp C_PLAY_PAUSE
+            >;
+        };
+
+        other_layer {
+            label = "Other";
+            bindings = <
+                &trans	   &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &bt BT_CLR
+                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &trans
+                &trans     &trans     &trans      &trans          &trans       &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+                                                  &trans          &trans       &trans           &trans
             >;
         };
 
