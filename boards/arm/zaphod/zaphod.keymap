@@ -54,20 +54,20 @@
         default_layer {
             label = "Base";
             bindings = <
-                &kp Q      &kp W      &kp F       &kp P            &kp G          &kp J            &kp L          &kp U        &kp Y        &kp SEMI
-                &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T      &kp D          &kp H            &hm RSHFT N    &hm RCTRL E  &hm LALT I   &hm LGUI O
-                &kp Z      &kp X      &kp C       &kp V            &kp B          &kp K            &kp M          &kp COMMA    &kp DOT      &kp SQT
-                                                  &lt NAV_L SPACE  &lt SYM_L BSPC &lt NUM_L TAB    &lt OTH_L RET
+                &kp Q      &kp W      &kp F       &kp P            &kp G          &kp J          &kp L          &kp U         &kp Y       &kp SEMI
+                &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T      &kp D          &kp H          &hm RSHFT N    &hm RCTRL E   &hm LALT I  &hm LGUI O
+                &kp Z      &kp X      &kp C       &kp V            &kp B          &kp K          &kp M          &kp COMMA     &kp DOT     &kp SQT
+                                                  &lt NAV_L SPACE  &lt SYM_L BSPC &lt NUM_L TAB  &lt OTH_L RET
             >;
         };
 
         nav_layer {
             label = "Nav";
             bindings = <
-                &trans     &trans     &trans      &trans           &trans         &trans           &kp LG(GRAVE)  &kp LG(LBRC) &kp LG(RBRC) &trans
-                &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT        &trans         &trans           &kp LARW       &kp DARW     &kp UARW     &kp RARW
-                &trans     &trans     &trans      &trans           &trans         &trans           &kp HOME       &kp PG_DN    &kp PG_UP    &kp END
-                                                  &trans           &kp BSPC       &kp TAB          &kp RET
+                &trans     &trans     &trans      &trans           &trans         &kp LG(GRAVE)  &kp LG(LBRC)   &kp LG(RBRC)  &trans      &trans
+                &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT        &trans         &kp LARW       &kp DARW       &kp UARW      &kp RARW    &trans
+                &trans     &trans     &trans      &trans           &trans         &kp HOME       &kp PG_DN      &kp PG_UP     &kp END     &trans
+                                                  &trans           &kp BSPC       &kp TAB        &kp RET
             >;
         };
 
