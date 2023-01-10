@@ -20,6 +20,76 @@
     combos {
         compatible = "zmk,combos";
 
+        // ( on l and n
+        ln_kp_lpar {
+            timeout-ms = <50>;
+            key-positions = <6 16>;
+            bindings = <&kp LPAR>;
+        };
+
+        // ) on u and e
+        ue_kp_rpar {
+            timeout-ms = <50>;
+            key-positions = <7 17>;
+            bindings = <&kp RPAR>;
+        };
+
+        // { on n and m
+        nm_kp_lbrc {
+            timeout-ms = <50>;
+            key-positions = <16 26>;
+            bindings = <&kp LBRC>;
+        };
+
+        // } on e and ,
+        ecomma_kp_rbrc {
+            timeout-ms = <50>;
+            key-positions = <17 27>;
+            bindings = <&kp RBRC>;
+        };
+
+        // [ on y and i
+        yi_kp_lbkt {
+            timeout-ms = <50>;
+            key-positions = <8 18>;
+            bindings = <&kp LBKT>;
+        };
+
+        // ] on ; and o
+        semio_kp_rbkt {
+            timeout-ms = <50>;
+            key-positions = <9 19>;
+            bindings = <&kp RBKT>;
+        };
+
+        // ESC on o and '
+        oquot_kp_esc {
+            timeout-ms = <50>;
+            key-positions = <19 29>;
+            bindings = <&kp ESC>;
+        };
+
+        // - on p and l
+        pl_kp_minus {
+            timeout-ms = <50>;
+            key-positions = <3 6>;
+            bindings = <&kp MINUS>;
+        };
+
+        // _ on v and m
+        pl_kp_minus {
+            timeout-ms = <50>;
+            key-positions = <23 26>;
+            bindings = <&kp UNDER>;
+        };
+
+        // ESC on a and o
+        ao_kp_esc {
+            timeout-ms = <50>;
+            key-positions = <10 19>;
+            bindings = <&kp ESC>;
+        };
+
         //med_mo {
 	    //timeout-ms = <50>;
         //    key-positions = <30 31>;
