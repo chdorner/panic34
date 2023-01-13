@@ -17,6 +17,10 @@
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -96,6 +100,13 @@
             timeout-ms = <50>;
             key-positions = <15 16>;
             bindings = <&kp TAB>;
+        };
+
+        // caps_word on z and '
+        zquot_caps_word {
+            timeout-ms = <50>;
+            key-positions = <20 29>;
+            bindings = <&caps_word>;
         };
 
         ble_mo {
