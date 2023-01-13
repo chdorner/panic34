@@ -111,10 +111,10 @@
             bindings = <&caps_word>;
         };
 
-        ble_mo {
+        other_sl {
             timeout-ms = <50>;
             key-positions = <30 31>;
-            bindings = <&mo OTH_L>;
+            bindings = <&sl OTH_L>;
         };
     };
 
