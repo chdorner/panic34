@@ -78,7 +78,7 @@
         };
 
         // _ on v and m
-        pl_kp_minus {
+        vm_kp_under {
             timeout-ms = <50>;
             key-positions = <23 26>;
             bindings = <&kp UNDER>;
