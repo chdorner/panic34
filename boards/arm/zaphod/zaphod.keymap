@@ -18,6 +18,13 @@
 #define ZMUTE LG(LA(LC(LS(A))))
 #define SCRNSHT LG(LS(N4))
 
+#define COMBO(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <50>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+  };
+
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt {
     tapping-term-ms = <240>;
@@ -33,94 +40,29 @@
         compatible = "zmk,combos";
 
         // ( on l and n
-        ln_kp_lpar {
-            timeout-ms = <50>;
-            key-positions = <6 16>;
-            bindings = <&kp LPAR>;
-        };
-
+        COMBO(lpar, &kp LPAR, 6 16)
         // ) on u and e
-        ue_kp_rpar {
-            timeout-ms = <50>;
-            key-positions = <7 17>;
-            bindings = <&kp RPAR>;
-        };
-
+        COMBO(rpar, &kp RPAR, 7 17)
         // { on n and m
-        nm_kp_lbrc {
-            timeout-ms = <50>;
-            key-positions = <16 26>;
-            bindings = <&kp LBRC>;
-        };
-
+        COMBO(lbrc, &kp LBRC, 16 26)
         // } on e and ,
-        ecomma_kp_rbrc {
-            timeout-ms = <50>;
-            key-positions = <17 27>;
-            bindings = <&kp RBRC>;
-        };
-
+        COMBO(rbrc, &kp RBRC, 17 27)
         // [ on y and i
-        yi_kp_lbkt {
-            timeout-ms = <50>;
-            key-positions = <8 18>;
-            bindings = <&kp LBKT>;
-        };
-
+        COMBO(lbkt, &kp LBKT, 8 18)
         // ] on ; and o
-        semio_kp_rbkt {
-            timeout-ms = <50>;
-            key-positions = <9 19>;
-            bindings = <&kp RBKT>;
-        };
-
-        // ESC on o and '
-        oquot_kp_esc {
-            timeout-ms = <50>;
-            key-positions = <19 29>;
-            bindings = <&kp ESC>;
-        };
-
+        COMBO(rbkt, &kp RBKT, 9 19)
         // - on p and l
-        pl_kp_minus {
-            timeout-ms = <50>;
-            key-positions = <3 6>;
-            bindings = <&kp MINUS>;
-        };
-
+        COMBO(minus, &kp MINUS, 3 6)
         // _ on v and m
-        vm_kp_under {
-            timeout-ms = <50>;
-            key-positions = <23 26>;
-            bindings = <&kp UNDER>;
-        };
-
+        COMBO(under, &kp UNDER, 23 26)
         // ESC on a and o
-        ao_kp_esc {
-            timeout-ms = <50>;
-            key-positions = <10 19>;
-            bindings = <&kp ESC>;
-        };
-
+        COMBO(esc, &kp ESC, 10 19)
         // TAB on h and n
-        hn_kp_tab {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&kp TAB>;
-        };
-
+        COMBO(tab, &kp TAB, 15 16)
         // caps_word on z and '
-        zquot_caps_word {
-            timeout-ms = <50>;
-            key-positions = <20 29>;
-            bindings = <&caps_word>;
-        };
-
-        other_sl {
-            timeout-ms = <50>;
-            key-positions = <30 31>;
-            bindings = <&sl OTH_L>;
-        };
+        COMBO(caps_word, &caps_word, 20 29)
+        // both left thumb keys
+        COMBO(other_sl, &sl OTH_L, 30 31)
     };
 
     behaviors {
