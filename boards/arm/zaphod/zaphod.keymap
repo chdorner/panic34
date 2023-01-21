@@ -84,6 +84,78 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        n0_f10: mrph_n0_f10 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N0_F10";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp F10>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        n1_f1: mrph_n1_f1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N1_F1";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp F1>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        n2_f2: mrph_n2_f2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N2_F2";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp F2>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        n3_f3: mrph_n3_f3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N3_F3";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp F3>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        n4_f4: mrph_n4_f4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N4_F4";
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&kp F4>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        n5_f5: mrph_n5_f5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N5_F5";
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&kp F5>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        n6_f6: mrph_n6_f6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N6_F6";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp F6>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        n7_f7: mrph_n7_f7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N7_F7";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp F7>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        n8_f8: mrph_n8_f8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N8_F8";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp F8>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        n9_f9: mrph_n9_f9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N9_F9";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp F9>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+
         bspcdel: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             label = "BSPC_DEL";
@@ -138,9 +210,9 @@
         num_layer {
             label = "Num";
             bindings = <
-                &trans     &kp N7     &kp N8      &kp N9           &kp EQUAL      &trans         &trans         &trans        &trans      &trans
-                &kp N0     &kp N4     &kp N5      &kp N6           &kp MINUS      &trans         &kp RSHFT      &kp RCTRL     &kp LALT    &kp LGUI
-                &kp DOT    &kp N1     &kp N2      &kp N3           &trans         &trans         &trans         &trans        &trans      &trans
+                &trans     &n7_f7     &n8_f8      &n9_f9           &kp EQUAL      &trans         &trans         &trans        &trans      &trans
+                &n0_f10    &n4_f4     &n5_f5      &n6_f6           &kp MINUS      &trans         &kp RSHFT      &kp RCTRL     &kp LALT    &kp LGUI
+                &kp DOT    &n1_f1     &n2_f2      &n3_f3           &trans         &trans         &trans         &trans        &trans      &trans
                                                   &kp SPACE        &kp BSPC       &trans         &kp RET
             >;
         };
