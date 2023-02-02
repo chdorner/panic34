@@ -57,8 +57,6 @@
         COMBO(under, &kp UNDER, 23 26)
         // ESC on a and o
         COMBO(esc, &kp ESC, 10 19)
-        // TAB on h and n
-        COMBO(tab, &kp TAB, 15 16)
         // caps_word on z and '
         COMBO(caps_word, &caps_word, 20 29)
         // both left thumb keys
@@ -183,7 +181,7 @@
                 &kp Q      &kp W      &kp F       &kp P            &kp G              &kp J          &kp L          &kp U         &kp Y       &kp SEMI
                 &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T      &kp D              &kp H          &hm RSHFT N    &hm RCTRL E   &hm LALT I  &hm LGUI O
                 &kp Z      &kp X      &kp C       &kp V            &kp B              &kp K          &kp M          &kp COMMA     &kp DOT     &kp SQT
-                                                  &lt NAV_L SPACE  &lt_bspc SYM_L 0   &kp TAB  &lt NUM_L RET
+                                                  &lt NAV_L SPACE  &lt_bspc SYM_L 0   &lt NUM_L TAB  &kp RET
             >;
         };
 
