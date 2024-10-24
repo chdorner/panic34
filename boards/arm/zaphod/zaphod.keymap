@@ -39,23 +39,23 @@
     combos {
         compatible = "zmk,combos";
 
-        // ( on l and n
+        // ( on u and j
         COMBO(lpar, &kp LPAR, 6 16)
-        // ) on u and e
+        // ) on i and k
         COMBO(rpar, &kp RPAR, 7 17)
-        // { on n and m
+        // { on j and m
         COMBO(lbrc, &kp LBRC, 16 26)
-        // } on e and ,
+        // } on k and ,
         COMBO(rbrc, &kp RBRC, 17 27)
-        // [ on y and i
+        // [ on o and l
         COMBO(lbkt, &kp LBKT, 8 18)
-        // ] on ; and o
+        // ] on p and ;
         COMBO(rbkt, &kp RBKT, 9 19)
-        // - on p and l
+        // - on r and u
         COMBO(minus, &kp MINUS, 3 6)
         // _ on v and m
         COMBO(under, &kp UNDER, 23 26)
-        // ESC on a and o
+        // ESC on a and ;
         COMBO(esc, &kp ESC, 10 19)
         // caps_word on z and '
         COMBO(caps_word, &caps_word, 20 29)
@@ -178,9 +178,9 @@
         default_layer {
             label = "Base";
             bindings = <
-                &kp Q      &kp W      &kp F       &kp P            &kp G              &kp J          &kp L          &kp U         &kp Y       &kp SEMI
-                &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T      &kp D              &kp H          &hm RSHFT N    &hm RCTRL E   &hm LALT I  &hm LGUI O
-                &kp Z      &kp X      &kp C       &kp V            &kp B              &kp K          &kp M          &kp COMMA     &kp DOT     &kp SQT
+                &kp Q      &kp W      &kp E       &kp R            &kp T              &kp Y          &kp U          &kp I         &kp O       &kp P
+                &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F      &kp G              &kp H          &hm RSHFT J    &hm RCTRL K   &hm LALT L  &hm LGUI SEMI
+                &kp Z      &kp X      &kp C       &kp V            &kp B              &kp N          &kp M          &kp COMMA     &kp DOT     &kp SQT
                                                   &lt NAV_L SPACE  &lt_bspc SYM_L 0   &lt NUM_L TAB  &kp RET
             >;
         };
@@ -188,8 +188,8 @@
         nav_layer {
             label = "Nav";
             bindings = <
-                &trans     &trans     &trans      &trans           &trans         &kp LG(GRAVE)  &kp LG(LBRC)   &kp UARW      &kp LG(RBRC)  &trans
-                &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT        &trans         &trans         &kp LARW       &kp DARW      &kp RARW      &trans
+                &trans     &trans     &trans      &trans           &trans         &kp LG(GRAVE)  &kp LG(LBRC)   &trans        &kp LG(RBRC)  &trans
+                &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT        &trans         &kp LARW       &kp DARW       &kp UARW      &kp RARW      &trans
                 &trans     &trans     &trans      &trans           &trans         &trans         &kp HOME       &kp PG_DN     &kp PG_UP     &kp END
                                                   &trans           &kp BSPC       &kp TAB        &kp RET
             >;
