@@ -36,3 +36,6 @@ steps:
           && echo "created package version latest"
     secrets:
       - FORGEJO_TOKEN_CHDORNER_PACKAGE_WRITE
+    when:
+      event: push
+      branch: main
