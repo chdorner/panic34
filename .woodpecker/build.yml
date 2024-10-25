@@ -30,6 +30,9 @@ steps:
           https://git.chdorner.com/api/packages/chdorner/generic/panic34/${CI_COMMIT_SHA}/zaphod.uf2 \
           && echo "created package version ${CI_COMMIT_SHA}"
       - |
+        curl -sS --user chdorner:$FORGEJO_TOKEN_CHDORNER_PACKAGE_WRITE -X DELETE \
+          "https://git.chdorner.com/api/packages/chdorner/generic/panic34/latest"
+      - |
         curl -sSf --user chdorner:$FORGEJO_TOKEN_CHDORNER_PACKAGE_WRITE \
           --upload-file build/zaphod/zephyr/zmk.uf2 \
           https://git.chdorner.com/api/packages/chdorner/generic/panic34/latest/zaphod.uf2 \
