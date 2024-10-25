@@ -14,7 +14,9 @@
 			"automerge": false
 		},
 		{
-			"matchFiles": [".github/workflows/build.yml"],
+			"matchFileNames": [
+				".github/workflows/build.yml"
+			],
 			"enabled": false
 		}
 	]
