@@ -12,6 +12,10 @@
 				"digest"
 			],
 			"automerge": false
+		},
+		{
+			"matchFiles": [".github/workflows/build.yml"],
+			"enabled": false
 		}
 	]
 }
