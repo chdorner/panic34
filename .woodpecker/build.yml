@@ -4,7 +4,7 @@ when:
 
 steps:
   - name: build
-    image: zmkfirmware/zmk-build-arm:stable
+    image: zmkfirmware/zmk-build-arm:stable@sha256:0979a8de325e3d822e48bd8d1d9efaee2984ad3750253119f920a342f0ce5cde
     commands:
       - mkdir config
       - mv west.yml boards config/
