@@ -37,8 +37,9 @@ steps:
           --upload-file build/zaphod/zephyr/zmk.uf2 \
           https://git.chdorner.com/api/packages/chdorner/generic/panic34/latest/zaphod.uf2 \
           && echo "created package version latest"
-    secrets:
-      - FORGEJO_TOKEN_CHDORNER_PACKAGE_WRITE
+    environment:
+      FORGEJO_TOKEN_CHDORNER_PACKAGE_WRITE:
+        from_secret: FORGEJO_TOKEN_CHDORNER_PACKAGE_WRITE
     when:
       event: push
       branch: main
