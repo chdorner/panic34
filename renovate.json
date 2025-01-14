@@ -4,20 +4,16 @@
 	],
 	"packageRules": [
 		{
-			"matchUpdateTypes": [
-				"major",
-				"minor",
-				"patch",
-				"pin",
-				"digest"
-			],
-			"automerge": true
-		},
-		{
-			"matchFileNames": [
-				".github/workflows/build.yml"
+			"matchManagers": [
+				"github-actions"
 			],
 			"enabled": false
+		},
+		{
+			"matchManagers": [
+				"woodpecker"
+			],
+			"automerge": true
 		}
 	]
 }
