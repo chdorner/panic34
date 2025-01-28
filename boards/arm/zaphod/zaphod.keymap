@@ -210,7 +210,7 @@
             bindings = <
                 &trans     &n7_f7     &n8_f8      &n9_f9           &kp EQUAL      &trans         &trans         &trans        &trans      &trans
                 &n0_f10    &n4_f4     &n5_f5      &n6_f6           &kp MINUS      &trans         &kp RSHFT      &kp RCTRL     &kp LALT    &kp LGUI
-                &kp DOT    &n1_f1     &n2_f2      &n3_f3           &trans         &trans         &trans         &trans        &trans      &trans
+                &kp DOT    &n1_f1     &n2_f2      &n3_f3           &kp PLUS       &trans         &trans         &trans        &trans      &trans
                                                   &kp SPACE        &kp BSPC       &trans         &kp RET
             >;
         };
